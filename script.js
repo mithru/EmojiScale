@@ -19,7 +19,7 @@ xmlhttp.onreadystatechange = function() {
     rightSelect.addEventListener("change", compareAndRender);
   }
 };
-xmlhttp.open("GET", "data.json", true);
+xmlhttp.open("GET", "data/data.json", true);
 xmlhttp.send();
 
 function generateDropdown(){
