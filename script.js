@@ -67,8 +67,8 @@ function compareAndRender(d){
     document.getElementById('left-viz').innerHTML = leftEmoji.emoji;
     document.getElementById('left-viz').style = "font-size : 6em";
     let otherHTML = "";
-    let multiplier = parseInt(leftEmoji.diameter_meters)/parseInt(rightEmoji.diameter_meters);
-    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier + " times larger than " + rightEmoji.emoji;
+    let multiplier = leftEmoji.diameter_meters/rightEmoji.diameter_meters;
+    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier.toFixed(2) + " times larger than " + rightEmoji.emoji;
 
     if(multiplier > 10000){ //TODO fix bug
       multiplier = 10000;
@@ -90,8 +90,8 @@ function compareAndRender(d){
     document.getElementById('right-viz').innerHTML = rightEmoji.emoji;
     document.getElementById('right-viz').style = "font-size : 6em";
     let otherHTML = "";
-    let multiplier = parseInt(rightEmoji.diameter_meters/leftEmoji.diameter_meters);
-    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier + " times smaller than " + rightEmoji.emoji;
+    let multiplier = rightEmoji.diameter_meters/leftEmoji.diameter_meters;
+    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier.toFixed(2) + " times smaller than " + rightEmoji.emoji;
     if(multiplier > 10000){ //TODO fix bug
       multiplier = 10000;
       alert("You're comparing objects with massive size differences between them. The generated representation will be inaccurate. Your browser might crash if it was accurate.");
