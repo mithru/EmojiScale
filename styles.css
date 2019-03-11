@@ -22,23 +22,22 @@ main {
   padding: auto;
   /* background-color: green; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 5vh;
 }
 
 select{
   border-width: 0;
   background-color: var(--color-light);
   padding: 1vh;
-  margin: 2vh;
-  font-size: 2vw;
-}
+  margin: 1.5vh;
+  font-size: 2vh;
+  width : 90%;
+  text-align: center; /*TODO: change later*/
 
-option{
-  /* line-height: 1vh; */
 }
 
 a{
@@ -54,7 +53,7 @@ footer {
   width: 90%;
   left: 0;
   bottom: 0;
-  margin: 1em;
+  margin-top: 1em;
 }
 
 @media only screen and (orientation: portrait) {
@@ -69,6 +68,8 @@ footer {
     .viz{
       width: 45vw;
       height:45vw;
+      max-width: 600px;
+      max-height: 600px;
     }
 }
 

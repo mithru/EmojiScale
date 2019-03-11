@@ -68,8 +68,11 @@ function compareAndRender(d){
     document.getElementById('left-viz').style = "font-size : 6em";
     let otherHTML = "";
     let multiplier = parseInt(leftEmoji.diameter_meters)/parseInt(rightEmoji.diameter_meters);
-    if(multiplier > 10000){
-      alert("You're comparing objects with massive size differences between them. This might take a while. Your browser might crash.");
+    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier + " times larger than " + rightEmoji.emoji;
+
+    if(multiplier > 10000){ //TODO fix bug
+      multiplier = 10000;
+      alert("You're comparing objects with massive size differences between them. The generated representation will be inaccurate. Your browser might crash if it was accurate.");
     }
     for(i=0;i<multiplier;i++){
       otherHTML = otherHTML + rightEmoji.emoji;
@@ -78,7 +81,6 @@ function compareAndRender(d){
     document.getElementById('right-viz').style = "font-size : 1em";
 
     // document.getElementById('right-viz').innerHTML = otherHTML;
-    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier + " times larger than " + rightEmoji.emoji;
     if(leftEmoji.diameter_meters == rightEmoji.diameter_meters){
       document.getElementById('left-viz').style = "font-size : 6em";
       document.getElementById('right-viz').style = "font-size : 6em";
@@ -89,14 +91,15 @@ function compareAndRender(d){
     document.getElementById('right-viz').style = "font-size : 6em";
     let otherHTML = "";
     let multiplier = parseInt(rightEmoji.diameter_meters/leftEmoji.diameter_meters);
-    if(multiplier > 10000){
-      alert("You're comparing objects with massive size differences between them. This might take a while. Your browser might crash.");
+    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier + " times smaller than " + rightEmoji.emoji;
+    if(multiplier > 10000){ //TODO fix bug
+      multiplier = 10000;
+      alert("You're comparing objects with massive size differences between them. The generated representation will be inaccurate. Your browser might crash if it was accurate.");
     }
     document.getElementById('left-viz').style = "font-size : 1em";
     for(i=0;i<multiplier;i++){
       otherHTML = otherHTML + leftEmoji.emoji;
       document.getElementById('left-viz').innerHTML = otherHTML;
     }
-    document.getElementById('info').innerHTML = leftEmoji.emoji + " is " + multiplier + " times smaller than " + rightEmoji.emoji;
   }
 }
