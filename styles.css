@@ -1,6 +1,7 @@
 :root {
   --color-dark: #222;
   --color-light: #fff;
+  --color-yellow: #FFDC00;
 }
 
 body {
@@ -38,6 +39,10 @@ select{
 
 option{
   /* line-height: 1vh; */
+}
+
+a{
+  color: var(--color-yellow);
 }
 
 footer {
