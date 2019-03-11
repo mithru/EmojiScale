@@ -1,0 +1,102 @@
+:root {
+  --color-dark: #222;
+  --color-light: #fff;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-family: 'EvolventaRegular';
+  text-align: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: 70vh;
+  margin: auto;
+  padding: auto;
+  /* background-color: green; */
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+select{
+  border-width: 0;
+  background-color: var(--color-light);
+  padding: 1vh;
+  margin: 2vh;
+  font-size: 2vw;
+}
+
+option{
+  /* line-height: 1vh; */
+}
+
+footer {
+  /* background: green; */
+  flex-shrink: 0;
+  text-align: center; /*TODO: change later*/
+  font-size: 1em;
+  /* position: absolute; */
+  width: 90%;
+  left: 0;
+  bottom: 0;
+  margin: 1em;
+}
+
+@media only screen and (orientation: portrait) {
+    .viz{
+      width:70vw;
+      height:70vw;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    /* portrait phones */
+    .viz{
+      width: 45vw;
+      height:45vw;
+    }
+}
+
+.selector{
+  min-width: 100%;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.viz{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+  min-width: 400px;
+  min-height: 400px;
+  overflow: scroll;
+  text-align: center;
+}
+
+.hidden{
+  display: none;
+}
+
+#left-viz{
+  font-size: 1em;
+}
+
+#right-viz{
+  font-size: 1em;
+}

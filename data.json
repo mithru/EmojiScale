@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "label": "Celestial bodies",
+      "options": [
+        {
+          "emoji": "🌕",
+          "label": "Moon",
+          "volume_km_3": 21900000000,
+          "diameter_meters" : 3475000
+        },
+        {
+          "emoji": "🌞",
+          "label": "Sun",
+          "volume_km_3": 1412000000000000000,
+          "diameter_meters" : 1392000000
+        },
+        {
+          "emoji": "🌏",
+          "label": "Earth",
+          "volume_km_3": 1000000000000,
+          "diameter_meters" : 12756000
+        }
+      ]
+    },
+    {
+      "label": "Animals",
+      "options": [
+        {
+          "emoji": "🐪",
+          "label": "Camel",
+          "diameter_meters": 2
+        },
+        {
+          "emoji": "🦎",
+          "label": "Lizard",
+          "diameter_meters": 0.3
+        }
+      ]
+    }
+  ]
+}
