@@ -73,7 +73,7 @@ const compareAndRender = (d) => {
       multiplier = 10000;
       alert("You're comparing objects with massive size differences between them. The generated representation will be inaccurate. Your browser might crash if it was accurate.");
     }
-    for(i=0; i<multiplier; i++){
+    for(let i=0; i<multiplier; i++){
       otherHTML = otherHTML + rightEmoji.emoji;
       document.getElementById('right-viz').innerHTML = otherHTML;
     }
